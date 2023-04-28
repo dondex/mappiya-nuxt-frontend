@@ -1,3 +1,8 @@
+<script setup>
+definePageMeta({
+    middleware: 'auth'
+});
+</script>
 
 <template>
     <div class="container d-flex justify-content-center">
@@ -30,12 +35,13 @@ export default {
             email: 'roosevelt.kilback@example.com',
             password: 'password',
             user: null,
-            pending: null
+            pending: null,
+            config: useRuntimeConfig()
         }
     },
     methods: {
         login() {
-            useFetch('http://app.mappiya.com/api/sanctum/token',
+            useFetch(this.config.public['apiBase'] + 'sanctum/token',
                 {
                     method: 'post',
                     body: {
@@ -43,14 +49,13 @@ export default {
                         email: this.email,
                         password: this.password
                     },
-                    headers: {
-                        accept: 'application/json',
-                    }
                 }
             ).then((data) => {
-                console.log(data.data.value);
+                const token = useCookie('bearer_token');
+                token.value = data.data.value;
+                navigateTo('/directory');
             });
         }
-    },
+    }
 };
 </script>
