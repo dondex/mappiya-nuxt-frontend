@@ -8,6 +8,12 @@ useHead({
             crossorigin: 'anonymous'
         },
         {
+            href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+            rel: 'stylesheet',
+            integrity: 'sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==',
+            crossorigin: 'anonymous'
+        },
+        {
             href: 'css/main.css',
             rel: 'stylesheet',
         }
@@ -23,61 +29,58 @@ useHead({
         }
     ]
 });
+function logout(event) {
+    const token = useCookie('bearer_token');
+    token.value = null;
+    navigateTo('/login')
+}
 </script>
 
 <template>
     <div>
         <div id="topbar" class="d-flex align-items-center fixed-top">
-            <div
-                class="container d-flex align-items-center justify-content-center justify-content-md-between"
-            >
+            <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
                 <div class="align-items-center d-none d-md-flex">
-                <!-- <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 10PM -->
+                    <!-- <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 10PM -->
                 </div>
                 <div class="d-flex align-items-center">
-                <div class="mx-2">
-                    <i class="fa-solid fa-language"></i><span>En - Language</span>
-                </div>
-                <div class="mx-2">
-                    <i class="fa-solid fa-rupee-sign"></i><span>SR - Currency</span>
-                </div>
-                <div class="mx-2">
-                    <i class="fa-solid fa-user"></i><span class="mx-1">My Account</span
-                    ><i class="fa-solid fa-caret-down"></i>
-                </div>
+                    <div class="mx-2">
+                        <i class="fa-solid fa-language"></i><span>En - Language</span>
+                    </div>
+                    <div class="mx-2">
+                        <i class="fa-solid fa-rupee-sign"></i><span>SR - Currency</span>
+                    </div>
+                    <div class="mx-2">
+                        <i class="fa-solid fa-user"></i><span class="mx-1">My Account</span><i
+                            class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="mx-2">
+                        <button class="btn btn-link" @click="logout">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="mx-1">Logout</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <header id="header" class="fixed-top">
             <div class="container d-flex align-items-center">
-                <nuxt-link to="/" class="logo me-auto"><img src="/img/mappiya-logo.png" alt=""
-                /></nuxt-link>
-                
+                <nuxt-link to="/" class="logo me-auto"><img src="/img/mappiya-logo.png" alt="" /></nuxt-link>
+
 
                 <nav id="navbar" class="navbar order-last order-lg-0 w-50">
-                <div class="input-group w-100">
-                    <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search product, vendor, item"
-                    aria-label="Search product, vendor, item"
-                    aria-describedby="button-addon2"
-                    />
-                    <button
-                    class="btn btn-outline-danger"
-                    type="button"
-                    id="button-addon2"
-                    >
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-                <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+                    <div class="input-group w-100">
+                        <input type="text" class="form-control" placeholder="Search product, vendor, item"
+                            aria-label="Search product, vendor, item" aria-describedby="button-addon2" />
+                        <button class="btn btn-outline-danger" type="button" id="button-addon2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
                 </nav>
                 <!-- .navbar -->
 
-                <a href="#appointment" class="appointment-btn scrollto"
-                ><span class="d-none d-md-inline">My</span> Cart</a
-                >
+                <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">My</span> Cart</a>
             </div>
         </header>
 
