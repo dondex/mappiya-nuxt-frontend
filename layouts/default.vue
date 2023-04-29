@@ -50,12 +50,12 @@ function logout(event) {
                     <div class="mx-2">
                         <i class="fa-solid fa-rupee-sign"></i><span>SR - Currency</span>
                     </div>
-                    <div class="mx-2">
+                    <div class="mx-2"  v-if="useCookie('bearer_token').value">
                         <i class="fa-solid fa-user"></i>
                         <span class="mx-1">My Account</span>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
-                    <div class="mx-2">
+                    <div class="mx-2" v-if="useCookie('bearer_token').value">
                         <button class="btn btn-link" @click="logout">
                             <i class="fa-solid fa-unlock"></i>
                             <span class="mx-1">Logout</span>
