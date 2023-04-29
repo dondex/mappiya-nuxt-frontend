@@ -51,12 +51,13 @@ function logout(event) {
                         <i class="fa-solid fa-rupee-sign"></i><span>SR - Currency</span>
                     </div>
                     <div class="mx-2">
-                        <i class="fa-solid fa-user"></i><span class="mx-1">My Account</span><i
-                            class="fa-solid fa-caret-down"></i>
+                        <i class="fa-solid fa-user"></i>
+                        <span class="mx-1">My Account</span>
+                        <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="mx-2">
                         <button class="btn btn-link" @click="logout">
-                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-unlock"></i>
                             <span class="mx-1">Logout</span>
                         </button>
                     </div>
@@ -95,5 +96,13 @@ function logout(event) {
 <style scoped>
 .router-link-exact-active {
     color: #12b488;
+}
+
+.btn-link {
+    font-size: smaller;
+    font-weight: 400;
+    /* text-decoration: underline; */
+    color: #fdfeff;
+    text-decoration: none;
 }
 </style>
