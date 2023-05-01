@@ -30,7 +30,7 @@ useHead({
     ]
 });
 function logout(event) {
-    const token = useCookie('bearer_token');
+    const token = useCookie('bearer_token')
     token.value = null;
     navigateTo('/login')
 }
@@ -50,7 +50,7 @@ function logout(event) {
                     <div class="mx-2">
                         <i class="fa-solid fa-rupee-sign"></i><span>SR - Currency</span>
                     </div>
-                    <div class="mx-2"  v-if="useCookie('bearer_token').value">
+                    <div class="mx-2" v-if="useCookie('bearer_token').value">
                         <i class="fa-solid fa-user"></i>
                         <span class="mx-1">My Account</span>
                         <i class="fa-solid fa-caret-down"></i>
@@ -60,6 +60,12 @@ function logout(event) {
                             <i class="fa-solid fa-unlock"></i>
                             <span class="mx-1">Logout</span>
                         </button>
+                    </div>
+                    <div class="mx-2" v-else>
+                        <nuxt-link to="login" class="btn btn-link">
+                            <i class="fa-solid fa-unlock"></i>
+                            <span class="mx-1">Login</span>
+                        </nuxt-link>
                     </div>
                 </div>
             </div>
