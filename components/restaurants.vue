@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section id="restaurants" class="restaurants section-bg">
+      <section id="restaurants" class="restaurants section-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-title text-dark">
             <h2 class="text-start">Restaurants</h2>
@@ -36,7 +36,10 @@
     </div>
 </template>
 
-<script >
+<script>
+// import { NuxtLink } from 'nuxt-link'
+
+// import jsonData from '../data/data.json'
 import logo1 from "/img/jollibee-logo.jpg"
 import logo2 from "/img/eben-logo.jpg"
 import logo3 from "/img/kuys-logo.jpg"
@@ -44,8 +47,13 @@ import logo4 from "/img/bulalohan-logo.jpg"
 import logo5 from "/img/taster-logo.jpg"
 import logo6 from "/img/islas-logo1.jpg"
 import logo7 from "/img/euro-logo1.png"
+
+
 export default {
-  
+  // components: {
+  //   NuxtLink,
+    
+  // },
   data() {
     return {
       restaurants: [
@@ -93,13 +101,8 @@ export default {
     },
   },
 };
-
-    // definePageMeta({
-    //     layout: 'restaurants'
-    // })
-
 </script>
 
-<style  scoped>
+<style scoped>
 
 </style>

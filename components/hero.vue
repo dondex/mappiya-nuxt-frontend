@@ -12,25 +12,25 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img style="height: 75vh;" src="/img/jollibee-banner.png" class="d-block w-100" alt="...">
+                    <img style="height: 70vh; object-fit: contain;" src="/img/jollibee-banner.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img style="height: 75vh;" src="/img/eben-banner2.jpg" class="d-block w-100" alt="...">
+                    <img style="height: 55vh; object-fit: contain;" src="/img/eben-banner2.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img style="height: 75vh;" src="/img/bulalohan-banner.jpg" class="d-block w-100" alt="...">
+                    <img style="height: 60vh; object-fit: contain;" src="/img/bulalohan-banner.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img style="height: 75vh;" src="/img/kuys-banner1.png" class="d-block w-100" alt="...">
+                    <img style="height: 70vh; object-fit: contain;" src="/img/kuys-banner1.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img style="height: 75vh;" src="/img/euro-banner1.png" class="d-block w-100" alt="...">
+                    <img style="height: 70vh; object-fit: contain;" src="/img/euro-banner1.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img style="height: 75vh;" src="/img/taster-banner2.png" class="d-block w-100" alt="...">
+                    <img style="height: 70vh; object-fit: contain;" src="/img/taster-banner2.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img style="height: 75vh;" src="/img/islas-banner1.png" class="d-block w-100" alt="...">
+                    <img style="height: 70vh; object-fit: contain;" src="/img/islas-banner1.png" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
