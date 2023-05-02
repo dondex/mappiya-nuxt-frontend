@@ -5,7 +5,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
             return navigateTo('/login')
         }
     }
-
+    
     if (cookie.value) {
         if (to.fullPath == '/login') {
             return navigateTo('/directory')

@@ -2,8 +2,9 @@
 definePageMeta({
     middleware: 'auth'
 });
+const route = useRoute();
 
-const { data: restaurants } = useLazyFetch(useRuntimeConfig().public['apiBase'] + 'restaurant',
+const { data: restaurants } = useLazyFetch(useRuntimeConfig().public['apiBase'] + 'categories/' + route.params.id,
     {
         method: 'get',
         headers: {
@@ -23,7 +24,6 @@ watch(restaurants, (response) => {
                 <ul v-if="restaurants">
                     <li v-for="item in restaurants.data">
                         {{ item }}
-                        <NuxtLink :to="{ path: '/menu/' + item.id}" class="btn btn-primary">Go To</NuxtLink>
                     </li>
                 </ul>
             </div>
