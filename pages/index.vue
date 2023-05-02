@@ -1,9 +1,18 @@
 <template>
     <div> 
-       
+      <Hero />
+      <FoodCateg />
     </div>
 </template>
 
-<style scoped>
+<script>
+import Hero from '@/components/hero.vue'
+import FoodCateg from '@/components/foodcateg.vue'
 
-</style>
+export default {
+  components: {
+    Hero,
+    FoodCateg
+  }
+}
+</script>
