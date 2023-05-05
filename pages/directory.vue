@@ -21,7 +21,7 @@ watch(restaurants, (response) => {
         <div class="card">
             <div class="card-body">
                 <ul v-if="restaurants">
-                    <li v-for="item in restaurants.data">
+                    <li v-for="item in restaurants.data" :key="item.id">
                         {{ item }}
                         <NuxtLink :to="{ path: '/menu/' + item.id}" class="btn btn-primary">Go To</NuxtLink>
                     </li>
@@ -35,7 +35,7 @@ watch(restaurants, (response) => {
 export default {
     data() {
         return {
-            restuarants: null,
+            restaurants: null,
             config: useRuntimeConfig()
         }
     },

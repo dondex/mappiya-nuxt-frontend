@@ -55,7 +55,7 @@ export default {
             ).then((data) => {
                 const token = useCookie('bearer_token');
                 token.value = data.data.value;
-                navigateTo('/directory');
+                navigateTo('/restaurants');
             });
         }
     }

@@ -15,19 +15,26 @@ const { data: restaurants } = useLazyFetch(useRuntimeConfig().public['apiBase'] 
 watch(restaurants, (response) => {
     console.log(response)
 })
+
 </script>
 
 <template>
     <div class="container vh-100 d-flex align-items-center justify-content-center">
-        <div class="card">
-            <div class="card-body">
-                <ul v-if="restaurants">
-                    <li v-for="item in restaurants.data">
-                        {{ item }}
-                    </li>
-                </ul>
+        <div class="row" v-if="restaurants">
+            <div class="col-md-4" v-for="item in restaurants.data" :key="item.id">
+                <div class="card my-2" >
+                    <img :src="item.image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <h6>{{ item.category }}</h6>
+                        <p class="card-text">{{ item.description }}</p>
+                        <span>{{ item.selling_price }}</span>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
         </div>
+        
     </div>
 </template>
 
