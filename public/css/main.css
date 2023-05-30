@@ -239,7 +239,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   color: #dc3545;
 }
 
@@ -274,11 +274,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul li:hover>a {
   color: #dc3545;
 }
 
-.navbar .dropdown:hover > ul {
+.navbar .dropdown:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -290,7 +290,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -302,7 +302,7 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover > ul {
+  .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
   }
 }
@@ -374,7 +374,7 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   color: #dc3545;
 }
 
@@ -404,11 +404,11 @@ h6 {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul li:hover>a {
   color: #dc3545;
 }
 
-.navbar-mobile .dropdown > .dropdown-active {
+.navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
 
@@ -574,6 +574,7 @@ h6 {
 }
 
 @media (min-width: 1024px) {
+
   #hero .carousel-control-prev,
   #hero .carousel-control-next {
     width: 5%;
@@ -663,11 +664,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
@@ -719,6 +720,7 @@ section {
   top: 0;
   border-radius: 0px;
 }
+
 .featured-services .icon-box1:hover::before {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://images.immediate.co.uk/production/volatile/sites/30/2020/08/easy-huevos-rancheros-28fc118.jpg");
@@ -936,6 +938,7 @@ section {
   position: relative;
   z-index: 1;
 }
+
 .resto-profile-logo img {
   position: absolute;
   left: 5%;
@@ -993,7 +996,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1210,4 +1213,29 @@ section {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
+}
+
+.scooter-man-logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.scooter-man-logo:after {
+  content: '';
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  background: #590000;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  top: 0%;
+  /* change value as required */
+  right: 14%;
+  /* change value as required */
+}
+
+.btn-info {
+  color: white;
 }
